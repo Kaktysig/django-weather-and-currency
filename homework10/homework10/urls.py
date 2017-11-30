@@ -20,7 +20,6 @@ from currency.views import currency
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-
     url(r'^weather/', weather),
     url(r'^currency',currency),
 ]
