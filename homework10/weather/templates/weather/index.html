@@ -1,0 +1,26 @@
+{% extends 'weather/_base.html' %}
+
+{% block content %}
+    <div class="content">
+         {% if error == 'no' %}
+             <div class="temperature">
+                 {{ data.temperature }}
+             </div>
+             <div class="min-max-temperature">
+                {{ data.min_temperature }}...{{ data.max_temperature }}
+             </div>
+             <div class="city">
+                {{ data.city }}
+             </div>
+             <div class="weather">
+                {{ data.weather }}
+             </div>
+         {% else %}
+             <div class="error">
+                 <p class="oops">{{ oopsmessage }}</p>
+                 <br>
+                 <p>{{ error }}</p>
+             </div>
+         {% endif %}
+    </div>
+{% endblock %}

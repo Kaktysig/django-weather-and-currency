@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Прогноз Погоды</title>
+
+    <link rel="stylesheet" href="{% static 'weather/css/tacit-css.min.css' %}">
+    <link rel="stylesheet" href="{% static 'weather/css/style.css' %}">
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+    {% include 'weather/_footer.html' %}
+
+</body>
+</html>
